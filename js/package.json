@@ -1,0 +1,7 @@
+{
+  "name": "ppca",
+  "version": "0.0.1-beta.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false
+}
