@@ -19,9 +19,6 @@ with open(sys.argv[1]) as csv_file:
 			AGATCseq = 'AGATC' * int(row[1])
 			AATGseq = 'AATG' * int(row[2])
 			TATCseq = 'TATC' * int(row[3])
-			AGATCseqc = 'AGATC' * (int(row[1]) + 1)
-			AATGseqc = 'AATG' * (int(row[2]) + 1)
-			TATCseqc = 'TATC' * (int(row[3]) + 1)
 			if (AGATCseq in sequence and AATGseq in sequence and TATCseq in sequence):
 				print(name)
 				os._exit(1)
