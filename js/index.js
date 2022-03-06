@@ -33,10 +33,15 @@ csv.parse(rawCSV, {
   const AGATC = 'AGATC'.repeat(+data[1]);
   const AATG = 'AATG'.repeat(+data[2]);
   const TATC = 'TATC'.repeat(+data[3]);
-  const AGATCc = 'AGATC'.repeat(1 + data[1]);
-  const AATGc = 'AATG'.repeat(1 + data[2]);
-  const TATCc = 'TATC'.repeat(1 + data[3]);
-  if ((sequence.includes(AGATC) && sequence.includes(AATG) && sequence.includes(TATC) && (1)) {
+  const AGATCc = 'AGATC'.repeat(parseInt(data[1]) + 1);
+  const AATGc = 'AATG'.repeat(parseInt(data[2]) + 1);
+  const TATCc = 'TATC'.repeat(parseInt(data[3]) + 1);
+
+  if (
+    (sequence.includes(AGATC) && sequence.includes(AATG) && sequence.includes(TATC))
+    &&
+    !sequence.includes(AGATCc) && !sequence.includes(AATGc) && !sequence.includes(TATCc)
+  ) {
     console.log(name);
     process.exit(0);
   }
