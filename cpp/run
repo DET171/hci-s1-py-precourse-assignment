@@ -1,0 +1,9 @@
+g++ main.cpp -o main -O2 -std=c++2b
+echo "Using 1.txt"
+./main ../data/data.csv ../data/1.txt
+echo "Using 2.txt"
+./main ../data/data.csv ../data/2.txt
+echo "Using 3.txt"
+./main ../data/data.csv ../data/3.txt
+echo "Using 4.txt"
+./main ../data/data.csv ../data/4.txt
